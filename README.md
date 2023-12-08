@@ -1,36 +1,30 @@
-# React + TypeScript + Vite
+# react-ts-sook-ui
 
+React + TypeScript + Vite
 TEST .. ing .. 🫥
 
 ## How to use
 
-Please Import Both thing that the component wolud you use and style.css
+Import Both thing that the component wolud you use and style.css
 
-> ⚠️ If you do not import style.css, the style will not be applied at all.
-
+```js
 import { Button } from "react-ts-sook-ui";
 import "react-ts-sook-ui/dist/style.css";
+```
+
+> ⚠️ Please be aware of that your styles will not work if you do not import the CSS.
 
 ## Currently Included Components
 
-- Button
+- <b>Button</b>
 
   - onClick
   - text
   - disabled
 
-- Badge
+- <b>Badge</b>
   - text
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
-# react-ts-sook-ui
+### npm Link
+
+👉🏻 https://www.npmjs.com/package/react-ts-sook-ui?activeTab=readme
