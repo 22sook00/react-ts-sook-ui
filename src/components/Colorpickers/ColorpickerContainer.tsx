@@ -51,7 +51,11 @@ const ColorpickerContainer: FC<ExtendColorPickerProps> = ({
       className={`${colorpickerWidth} ${
         withInput && "absolute left-0"
       } border z-50 flex flex-col gap-2 h-fit rounded-lg shadow-sm drop-shadow-sm 
-      ${dark ? "bg-primary-dark text-gray-light" : "bg-gray-light"}`}
+      ${
+        dark
+          ? "bg-sook-primary-dark text-sook-gray-light"
+          : "bg-sook-gray-light"
+      }`}
     >
       <section className={`flex gap-2 items-center rounded-lg `}>
         <ColorPalette

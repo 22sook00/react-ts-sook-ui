@@ -11,21 +11,19 @@ function App() {
   }, []);
 
   return (
-    <div id="App" className="w-full flex flex-col gap-10 items-center">
+    <div id="App" className="w-full flex flex-col gap-3 items-center">
+      <Highlight size="xs" text={`안녕하세요`} theme="progress" />
+      <Highlight theme="light" text={`나는 이숙영이다요.`} />
       <Highlight
-        text={`가나다라마바사아자차카타파하\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
-      />
-      <Highlight
+        size="md"
         theme="error"
-        text={`가나다라마바사아자차카타파하\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
+        text={`블로그데스네\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
       />
-      <Highlight
-        theme="success"
-        text={`가나다라마바사아자차카타파하\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
-      />
+      <Highlight theme="success" size="lg" text={`호호호호하하하하히히히`} />
       <Highlight
         theme="warning"
-        text={`가나다라마바사아자차카타파하\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
+        size="xl"
+        text={`Automating Repetitive Tasks: Productivity Hacks for Developers`}
       />
       <Button onClick={onClick} text="다이얼로그 열기 버튼" />
       <Button
@@ -35,21 +33,18 @@ function App() {
         text="다이얼로그 열기 버튼"
       />
       <Colorpicker theme="success" />
-      <Button
-        isOutline
-        theme={"warning"}
-        onClick={onClick}
-        text="다이얼로그 열기 버튼"
-      />
+      <Button theme={"light"} onClick={onClick} text="다이얼로그 열기 버튼" />
       <Button isOutline theme={"error"} onClick={onClick} text="ERROR 버튼" />
       <Button disabled onClick={onClick} text="DISABLED!" />
       <Badge text="SOOK BADGE" />
-      <Badge color="#70a6f1" size="md" text="SOOK BADGE" />
-      <Badge color="#fb56f8" size="lg" text="SOOK BADGE" />
+      <Badge theme="warning" size="md" text="SOOK BADGE" />
+      <Badge customColor="#fb56f8" size="lg" text="PINK SOOK BADGE" />
 
       {isOpenModal && (
         <Dialog
-          size="md"
+          size="sm"
+          //isXIcon={false}
+          //isFixedButton={false}
           handleClosePopup={() => setIsOpenModal(false)}
           handleConfirmPopup={() => setIsOpenModal(false)}
           title={

@@ -36,40 +36,36 @@ export default {
       },
       colors: {
         //primary
-        "primary-tint": "rgba(227, 250, 252, 0.35)",
-        "primary-light": "#e3fafc",
-        "primary-default": "#15aabf", //rgb(21, 170, 191)
-        "primary-dark": "#1098ad", //rgb(16, 152, 173)
+        "sook-primary-tint": "rgba(227, 250, 252, 0.35)",
+        "sook-primary-light": "#6ed8cd",
+        "sook-primary-default": "#47c6b9",
+        "sook-primary-dark": "#1eb7a7",
         //Grayscale
-        "gray-light": "#f9f9fb",
-        "gray-default": "rgb(237, 240, 243)",
-        "gray-dark": "rgb(145 161 180)", //#91a1b4
-        "gray-hover": "rgba(0, 0, 0, 0.05)",
+        "sook-gray-light": "#f9f9fb",
+        "sook-gray-default": "#edf0f3",
+        "sook-gray-dark": "#91a1b4", //#91a1b4
+        "sook-gray-hover": "rgba(0, 0, 0, 0.05)",
 
-        "black-light": "#475569",
-        "black-default": "#334155",
-        "black-dark": "#1e293b",
+        "sook-black-light": "#475569",
+        "sook-black-default": "#334155",
+        "sook-black-dark": "#1e293b",
         //tag&badge 와 같은 point color
-        //*red
-        "point-red-light": "rgb(253 164 175)",
-        "point-red": "rgb(244 63 94)",
-        "point-red-dark": "rgb(225 29 72)",
-        //*yellow
-        "point-yel-light": "rgb(253 230 138)",
-        "point-yel": "rgb(252 211 77)",
-        "point-yel-dark": "rgb(251 191 36)",
-        //*green
-        "point-gr-light": "#6ed8cd",
-        "point-gr": "#47c6b9",
-        "point-gr-dark": "#1eb7a7",
-        //*blue
-        "point-blue-light": "#7abef5",
-        "point-blue": "#2b96ed",
-        "point-blue-dark": "#1683db",
-        //*indigo
-        "point-indigo-light": "#9d9df9",
-        "point-indigo": "#7374f3",
-        "point-indigo-dark": "#5051e6",
+        //*error
+        "sook-point-red-light": "#fda4af",
+        "sook-point-red": "#f43f5e",
+        "sook-point-red-dark": "#e11d48",
+        //*warning
+        "sook-point-yel-light": "#fde68a",
+        "sook-point-yel": "#fcd34d",
+        "sook-point-yel-dark": "#fbbf24",
+        //*success
+        "sook-point-blue-light": "#7abef5",
+        "sook-point-blue": "#2b96ed",
+        "sook-point-blue-dark": "#1683db",
+        //*progress
+        "sook-point-indigo-light": "#9d9df9",
+        "sook-point-indigo": "#7374f3",
+        "sook-point-indigo-dark": "#5051e6",
 
         //shadow
         "primary-shadow": "0 1px 2px 0 rgb(0 0 0 / 0.05)",

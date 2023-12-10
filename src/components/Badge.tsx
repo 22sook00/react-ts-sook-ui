@@ -1,19 +1,33 @@
 import React, { FC, useEffect, useState } from "react";
+import { ThemeProps } from "../interface/theme";
 
-type TagProps = {
+interface BadgeProps extends ThemeProps {
   text: string;
-  color?: string;
-  background?: string;
   size?: "sm" | "md" | "lg";
-};
+  customColor?: string;
+}
 
-export const Badge: FC<TagProps> = ({
+export const Badge: FC<BadgeProps> = ({
   text,
-  color = "#4263EB",
-  size = "sm",
-  background = "unset",
+  theme = "primary",
+  size = "md",
+  customColor,
 }) => {
   const [bgColor, setBgColor] = useState<string>("");
+  const themeProps = customColor
+    ? customColor
+    : theme === "primary"
+    ? `#1eb7a7`
+    : theme === "success"
+    ? `#1683db`
+    : theme === "progress"
+    ? `#5051e6`
+    : theme === "error"
+    ? `#e11d48`
+    : theme === "warning"
+    ? `#fbbf24`
+    : "#1e293b";
+
   const hexToRGB = (hex: string, alpha = 1) => {
     let parseString = hex;
     if (hex.startsWith("#")) {
@@ -32,8 +46,8 @@ export const Badge: FC<TagProps> = ({
   };
 
   useEffect(() => {
-    hexToRGB(color, 0.2);
-  }, [color]);
+    hexToRGB(themeProps || "#6ed8cd", 0.2);
+  }, [themeProps]);
 
   const badgeSize =
     size === "sm"
@@ -45,8 +59,8 @@ export const Badge: FC<TagProps> = ({
   return (
     <div
       style={{
-        color: color,
-        background: bgColor === "" ? background : bgColor,
+        color: themeProps,
+        background: bgColor === "" ? customColor : bgColor,
       }}
       className={`w-fit rounded-lg font-bold text-center ${badgeSize} `}
     >

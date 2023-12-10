@@ -3,36 +3,53 @@ import { ThemeProps } from "../interface/theme";
 
 interface HighlightProps extends ThemeProps {
   text: string;
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
   customColor?: string;
 }
 
 export const Highlight = ({
   text,
+  size = "md",
   theme = "primary",
   customColor,
 }: HighlightProps) => {
-  const themeProps =
-    theme === "primary"
-      ? `from-primary to-primary  dark:from-primary-dark/50 dark:to-primary-dark/50 
+  const themeProps = customColor
+    ? customColor
+    : theme === "primary"
+    ? `from-sook-primary-default to-sook-primary-default  dark:from-sook-primary-default-dark/50 dark:to-sook-primary-default-dark/50 
       `
-      : theme === "success"
-      ? `from-point-blue to-point-blue  dark:from-point-blue-dark/50 dark:to-point-blue-dark/50 
+    : theme === "success"
+    ? `from-sook-point-blue to-sook-point-blue  dark:from-sook-point-blue-dark/50 dark:to-sook-point-blue-dark/50 
       `
-      : theme === "progress"
-      ? `from-point-indigo to-point-indigo  dark:from-point-indigo-dark/50 dark:to-point-indigo-dark/50 
+    : theme === "progress"
+    ? `from-sook-point-indigo to-sook-point-indigo  dark:from-sook-point-indigo-dark/50 dark:to-sook-point-indigo-dark/50 
       `
-      : theme === "error"
-      ? `from-point-red to-point-red  dark:from-point-red-dark/50 dark:to-point-red-dark/50 
+    : theme === "error"
+    ? `from-sook-point-red to-sook-point-red  dark:from-sook-point-red-dark/50 dark:to-sook-point-red-dark/50 
    `
-      : theme === "warning"
-      ? `from-point-yel to-point-yel  dark:from-point-yel-dark/50 dark:to-point-yel-dark/50 
+    : theme === "warning"
+    ? `from-sook-point-yel to-sook-point-yel  dark:from-sook-point-yel-dark/50 dark:to-sook-point-yel-dark/50 
   `
-      : customColor;
+    : theme === "light"
+    ? `from-sook-gray-default to-sook-gray-default  dark:from-sook-gray-default-dark/50 dark:to-sook-gray-default-dark/50`
+    : "";
+  const sizeProps =
+    size === "xs"
+      ? "text-xs"
+      : size === "sm"
+      ? "text-sm "
+      : size === "md"
+      ? "text-base "
+      : size === "lg"
+      ? "text-lg "
+      : "text-xl";
 
   return (
     <div className="group">
-      <div className="w-full p-4 xs:p-6 sm:p-10 z-20">
-        <h2 className=" whitespace-pre font-bold capitalize text-sm xs:text-base sm:text-xl md:text-2xl text-light mt-2 sm:mt-4">
+      <div className="w-full p-1 z-20">
+        <h2
+          className={`${sizeProps} whitespace-pre font-bold capitalize text-light `}
+        >
           <span
             className={`${themeProps ?? customColor} 
             break-keep
