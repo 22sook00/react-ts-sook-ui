@@ -1,9 +1,13 @@
 # react-ts-sook-ui
 
-안녕하세요.
-자주쓰는 공통컴포넌트 모음 Zip🏠 입니다.
+안녕하세요 🙇🏻‍♀️ <br/>
+자주쓰는 공통컴포넌트 모음 Zip🏠 입니다. <br/>
 해당 프로젝트는 React + TypeScript + Vite 기반으로 세팅되었으며
 스타일은 Tailwindcss 로 작성되었습니다.
+
+Hello 👋🏻 <br/>
+This is a kinda of collection of frequently used common components. <br/>
+The project was set up based on React + TypeScript + Vite and Tailwindcss.
 
 > 🔥 still,, TEST .. ing .. ,, 🫥
 
@@ -62,12 +66,12 @@ import "react-ts-sook-ui/dist/style.css";
 
 #### Badge
 
-| Prop        | Type               | Default | Description                                                                      |
-| ----------- | ------------------ | ------- | -------------------------------------------------------------------------------- |
-| text        | string             |         | 뱃지 텍스트                                                                      |
-| size        | "sm" , "md" , "lg" | md      | 뱃지 사이즈                                                                      |
-| theme       | ThemeProps         | primary | 기본 컬러테마설정                                                                |
-| customStyle | string             |         | 사용자 지정 스타일. 텍스트 컬러의 0.2 만큼의 opacity 를 가진 컬러가 배경이 된다. |
+| Prop        | Type               | Default | Description                                                          |
+| ----------- | ------------------ | ------- | -------------------------------------------------------------------- |
+| text        | string             |         | 뱃지 텍스트                                                          |
+| size        | "sm" , "md" , "lg" | md      | 뱃지 사이즈                                                          |
+| theme       | ThemeProps         | primary | 기본 컬러테마설정                                                    |
+| customStyle | string             |         | 사용자 지정 스타일. 텍스트 컬러의 0.2 만큼의 opacity 가 배경이 된다. |
 
 #### Highlight
 
