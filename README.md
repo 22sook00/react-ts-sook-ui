@@ -1,6 +1,6 @@
 # react-ts-sook-ui
 
-안녕하세요
+안녕하세요.
 자주쓰는 공통컴포넌트 모음 Zip🏠 입니다.
 해당 프로젝트는 React + TypeScript + Vite 기반으로 세팅되었으며
 스타일은 Tailwindcss 로 작성되었습니다.
@@ -20,11 +20,10 @@ import "react-ts-sook-ui/dist/style.css";
 
 ## 🎨 Basic Color system
 
-```
-export interface ThemeProps {
-  theme?: "primary" | "success" | "progress" | "error" | "warning" | "light;
-}
-```
+<b>ThemeProps</b>
+| Prop | Type | Default | Description |
+| ----- | ----------------------------------------------------------------- | ------- | ----------- |
+| theme | "primary" ,"success" , "progress" , "error" , "warning" , "light" | primary | 테마컬러 |
 
 ##### Text Color
 
@@ -63,12 +62,12 @@ export interface ThemeProps {
 
 #### Badge
 
-| Prop        | Type               | Default | Description                                                                                                     |
-| ----------- | ------------------ | ------- | --------------------------------------------------------------------------------------------------------------- |
-| text        | string             |         | 뱃지 텍스트                                                                                                     |
-| size        | "sm" , "md" , "lg" | md      | 뱃지 사이즈                                                                                                     |
-| theme       | ThemeProps         | primary | 기본 컬러테마설정                                                                                               |
-| customStyle | string             |         | 사용자 지정 스타일. 별도의 백그라운드 컬러가 없으면 텍스트컬러의 0.2 만큼의 opacity 를 가진 컬러가 배경이 된다. |
+| Prop        | Type               | Default | Description                                                                      |
+| ----------- | ------------------ | ------- | -------------------------------------------------------------------------------- |
+| text        | string             |         | 뱃지 텍스트                                                                      |
+| size        | "sm" , "md" , "lg" | md      | 뱃지 사이즈                                                                      |
+| theme       | ThemeProps         | primary | 기본 컬러테마설정                                                                |
+| customStyle | string             |         | 사용자 지정 스타일. 텍스트 컬러의 0.2 만큼의 opacity 를 가진 컬러가 배경이 된다. |
 
 #### Highlight
 
