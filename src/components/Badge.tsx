@@ -51,10 +51,10 @@ export const Badge: FC<BadgeProps> = ({
 
   const badgeSize =
     size === "sm"
-      ? "px-2 py-1 text-[10px]"
+      ? " text-[10px]"
       : size === "md"
-      ? "px-3 py-1 text-xs"
-      : "px-4 py-2 text-sm";
+      ? " text-[12px]"
+      : " text-[14px]";
 
   return (
     <div
@@ -62,7 +62,7 @@ export const Badge: FC<BadgeProps> = ({
         color: themeProps,
         background: bgColor === "" ? customColor : bgColor,
       }}
-      className={`w-fit rounded-lg font-bold text-center ${badgeSize} `}
+      className={`px-[5px] py-[2px] w-fit rounded-[5px] font-semibold text-center ${badgeSize} `}
     >
       {text}
     </div>

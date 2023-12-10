@@ -37,7 +37,7 @@ const ColorEyedropper: FC<
       <Button
         customStyle={`
         ${width === 160 ? " h-fit text-[10px]" : " h-fit py-2 text-xs"}
-        w-full  text-white font-bold`}
+        w-full  font-bold`}
         onClick={handleOpenEyedropper}
         theme={theme}
         isRing={false}

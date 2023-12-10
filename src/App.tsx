@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { Badge, Colorpicker, Dialog, Highlight } from "./components";
 import { Button } from "./components/Button";
@@ -36,17 +36,19 @@ function App() {
       <Button theme={"light"} onClick={onClick} text="다이얼로그 열기 버튼" />
       <Button isOutline theme={"error"} onClick={onClick} text="ERROR 버튼" />
       <Button disabled onClick={onClick} text="DISABLED!" />
-      <Badge text="SOOK BADGE" />
-      <Badge theme="warning" size="md" text="SOOK BADGE" />
-      <Badge customColor="#fb56f8" size="lg" text="PINK SOOK BADGE" />
+      <Badge size="sm" text="SOOK BADGE" />
+      <Badge theme="warning" text="SOOK BADGE" />
+      <Badge customColor="#6a6f79" size="lg" text="PINK SOOK BADGE" />
 
       {isOpenModal && (
         <Dialog
-          size="sm"
-          //isXIcon={false}
+          size="lg"
+          isXIcon={true}
           //isFixedButton={false}
           handleClosePopup={() => setIsOpenModal(false)}
-          handleConfirmPopup={() => setIsOpenModal(false)}
+          handleConfirmPopup={() => {
+            console.log("CONFIRM!"), setIsOpenModal(false);
+          }}
           title={
             "다이얼로그열렸다다이얼로그열렸다다이얼로그열렸다다이얼로그열렸다다이얼로그열렸다다이얼로그열렸다다이얼로그열렸다다이얼로그열렸다"
           }

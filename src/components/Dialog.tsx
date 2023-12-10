@@ -15,6 +15,7 @@ export type DialogProps = {
   disabled?: boolean;
   isXIcon?: boolean;
   isFixedButton?: boolean;
+  isOpenModal?: boolean;
 };
 export const Dialog = ({
   title,
@@ -33,6 +34,9 @@ export const Dialog = ({
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
+    let dialogBodyDiv = document.createElement("div");
+    dialogBodyDiv.id = "dialog-root";
+    document.body.appendChild(dialogBodyDiv);
     if (document) {
       const dom = document.getElementById("dialog-root");
       ref.current = dom;
@@ -41,6 +45,10 @@ export const Dialog = ({
 
     return () => {
       // 현재 떠 있는 다이얼로그가 없을 떄 배경 스크롤 막기 해제
+      const dialogToRemove = document.getElementById("dialog-root");
+      if (dialogToRemove) {
+        document.body.removeChild(dialogToRemove);
+      }
       if (document.querySelectorAll("#dialog-root > div").length === 0) {
         document.body.classList.remove("sook-hidden-scroll");
       }
@@ -97,14 +105,12 @@ export const Dialog = ({
           </section>
           {isFixedButton && (
             <section className="default-flex justify-end p-4">
-              {handleClosePopup && (
-                <Button
-                  theme="success"
-                  isOutline
-                  text={cancelText}
-                  onClick={handleClosePopup}
-                />
-              )}
+              <Button
+                theme="success"
+                isOutline
+                text={cancelText}
+                onClick={handleClosePopup}
+              />
               {handleConfirmPopup && (
                 <Button
                   type={type}

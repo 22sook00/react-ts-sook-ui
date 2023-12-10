@@ -48,7 +48,7 @@ export const Highlight = ({
     <div className="group">
       <div className="w-full p-1 z-20">
         <h2
-          className={`${sizeProps} whitespace-pre font-bold capitalize text-light `}
+          className={`${sizeProps} whitespace-pre font-bold capitalize text-sook-black-dark `}
         >
           <span
             className={`${themeProps ?? customColor} 
