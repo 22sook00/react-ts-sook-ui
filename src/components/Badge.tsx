@@ -40,7 +40,7 @@ export const Badge: FC<TagProps> = ({
       ? "px-2 py-1 text-[10px]"
       : size === "md"
       ? "px-3 py-1 text-xs"
-      : "px-5 py-1 text-sm";
+      : "px-4 py-2 text-sm";
 
   return (
     <div
@@ -48,7 +48,7 @@ export const Badge: FC<TagProps> = ({
         color: color,
         background: bgColor === "" ? background : bgColor,
       }}
-      className={`w-fit rounded-md font-bold text-center ${badgeSize} `}
+      className={`w-fit rounded-lg font-bold text-center ${badgeSize} `}
     >
       {text}
     </div>
