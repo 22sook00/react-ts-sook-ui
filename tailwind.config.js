@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  important: true, // 커스터마이징한 css 가 라이브러리보다 우선적으로 먹히기 위해서 사용
   theme: {
     extend: {
       keyframes: {
@@ -66,9 +67,9 @@ export default {
         "point-blue": "#2b96ed",
         "point-blue-dark": "#1683db",
         //*indigo
-        "point-indigo-light": "rgb(199 210 254)",
-        "point-indigo": "rgb(165 180 255)",
-        "point-indigo-dark": "rgb(99 102 241)",
+        "point-indigo-light": "#9d9df9",
+        "point-indigo": "#7374f3",
+        "point-indigo-dark": "#5051e6",
 
         //shadow
         "primary-shadow": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
@@ -86,8 +87,9 @@ export default {
         xl: { max: "1279px" },
         lg: { max: "1023px" },
         md: { max: "767px" },
-        sm: { max: "639px" },
+        sm: { max: "480px" },
       },
+
       gridTemplateColumns: {
         "listpage-desktop": "269px minmax(1fr, 835px)",
       },

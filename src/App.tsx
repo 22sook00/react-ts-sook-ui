@@ -1,18 +1,32 @@
 import { useCallback, useState } from "react";
-import "./App.css";
-import { Badge, Dialog } from "./components";
+
+import { Badge, Colorpicker, Dialog, Highlight } from "./components";
 import { Button } from "./components/Button";
 
 function App() {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const onClick = useCallback(() => {
-    console.log("CLICK");
     setIsOpenModal(true);
   }, []);
 
   return (
     <div id="App" className="w-full flex flex-col gap-10 items-center">
+      <Highlight
+        text={`가나다라마바사아자차카타파하\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
+      />
+      <Highlight
+        theme="error"
+        text={`가나다라마바사아자차카타파하\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
+      />
+      <Highlight
+        theme="success"
+        text={`가나다라마바사아자차카타파하\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
+      />
+      <Highlight
+        theme="warning"
+        text={`가나다라마바사아자차카타파하\n가나다라마바사아자차카타파하가나다라마바사아자차카타파하\n29192391`}
+      />
       <Button onClick={onClick} text="다이얼로그 열기 버튼" />
       <Button
         isOutline
@@ -20,6 +34,7 @@ function App() {
         onClick={onClick}
         text="다이얼로그 열기 버튼"
       />
+      <Colorpicker theme="success" />
       <Button
         isOutline
         theme={"warning"}

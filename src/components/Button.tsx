@@ -1,13 +1,13 @@
 import React, { useCallback } from "react";
 import "../index.css";
+import { ThemeProps } from "../interface/theme";
 
-interface ButtonProps {
+interface ButtonProps extends ThemeProps {
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
   text: string;
   type?: "button" | "submit" | "reset";
   size?: "sm" | "md" | "lg";
-  theme?: "primary" | "success" | "proress" | "error" | "warning";
   isRing?: boolean;
   isOutline?: boolean;
   customStyle?: string | number;
@@ -47,7 +47,7 @@ export const Button = ({
         " bg-white hover:bg-white text-point-blue hover:text-point-blue "
       }
       ${!isRing && "focus:ring-0 focus:ring-opacity-0 ring-offset-0"}`
-      : theme === "proress"
+      : theme === "progress"
       ? `btn-tertiary 
       ${
         isOutline &&

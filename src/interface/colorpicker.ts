@@ -33,21 +33,9 @@ interface ColorHSV {
 export type OnChangeCallback = (color: Color) => void;
 
 export interface ColorPickerProps {
-  /**
-   * The width of the color picker.
-   */
   readonly width: number;
-  /**
-   * The height of the color picker.
-   */
   readonly height?: number;
-  /**
-   * The current [Color](https://github.com/Wondermarin/react-color-palette#color).
-   */
   readonly color: Color;
-  /**
-   * The function that accepts the updated [Color](https://github.com/Wondermarin/react-color-palette#color) as a single argument.
-   */
   readonly onChange: OnChangeCallback;
   /**
    * .

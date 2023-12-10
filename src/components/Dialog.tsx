@@ -47,14 +47,14 @@ export const Dialog = ({
   useEffect(() => {
     setMounted(true);
     if (document) {
-      const dom = document.getElementById("dialog-root");
+      const dom = document.getElementById("root");
       ref.current = dom;
     }
     document.body.classList.add("sook-hidden-scroll");
 
     return () => {
       // 현재 떠 있는 다이얼로그가 없을 떄 배경 스크롤 막기 해제
-      if (document.querySelectorAll("#dialog-root > div").length === 0) {
+      if (document.querySelectorAll("#root > div").length === 0) {
         document.body.classList.remove("sook-hidden-scroll");
       }
     };
