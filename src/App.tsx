@@ -1,7 +1,12 @@
-import { useCallback, useEffect, useState } from "react";
+import { RefObject, useCallback, useEffect, useRef, useState } from "react";
 
-import { Badge, Colorpicker, Dialog, Highlight } from "./components";
+import { Badge, Colorpicker, Dialog, Highlight, ScrollNav } from "./components";
 import { Button } from "./components/Button";
+import { TestSection } from "./components/TestSection";
+
+export type ScrollNavType = {
+  scrollRef: any;
+};
 
 function App() {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -10,8 +15,11 @@ function App() {
     setIsOpenModal(true);
   }, []);
 
+  const scrollRef = useRef<any>([]);
+
   return (
     <div id="App" className="w-full flex flex-col gap-3 items-center">
+      <ScrollNav scrollRef={scrollRef} />
       <Highlight size="xs" text={`안녕하세요`} theme="progress" />
       <Highlight theme="light" text={`나는 이숙영이다요.`} />
       <Highlight
@@ -39,6 +47,11 @@ function App() {
       <Badge size="sm" text="SOOK BADGE" />
       <Badge theme="warning" text="SOOK BADGE" />
       <Badge customColor="#6a6f79" size="lg" text="PINK SOOK BADGE" />
+
+      <TestSection ref={scrollRef} idx={1} />
+      <TestSection ref={scrollRef} idx={2} />
+      <TestSection ref={scrollRef} idx={3} />
+      <TestSection ref={scrollRef} idx={4} />
 
       {isOpenModal && (
         <Dialog
